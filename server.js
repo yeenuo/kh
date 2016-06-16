@@ -41,22 +41,22 @@ app.use(session({
 		cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}//30 days  
 	}));
 
-app.use(function(req,res,next){
-    if (!req.session.user) {
-		var s = req.url.substring(0,6);
-        if((s == "/login")||(s == "/excel")||(s == "/rspwd")||(req.url=="")||(req.url=="/")){//以login作为开始
-			console.log('Go Login');
-            next();//如果请求的地址是登录则通过，进行下一个请求
-        }
-        else
-        {
-			console.log('No Login');
-            res.redirect('/login');
-        }
-    } else if (req.session.user) {
-        next();
-    }
-});
+//app.use(function(req,res,next){
+//     if (!req.session.user) {
+// 		var s = req.url.substring(0,6);
+//         if((s == "/login")||(s == "/excel")||(s == "/rspwd")||(req.url=="")||(req.url=="/")){//以login作为开始
+// 			console.log('Go Login');
+//             next();//如果请求的地址是登录则通过，进行下一个请求
+//         }
+//         else
+//         {
+// 			console.log('No Login');
+//             res.redirect('/login');
+//         }
+//     } else if (req.session.user) {
+//         next();
+//     }
+// });
 
 
 //身份认证
@@ -102,21 +102,3 @@ console.log('Server start on ' + config.port);
 app.get('/login',function(req,res){
     res.render("login");
 });
-/*
-app.post('/login',function(req,res){
-    if(req.body.username=="love" && req.body.password=="love"){
-        var user = {'username':'love'};
-        req.session.user = user;
-        res.redirect('/admin/app/list');
-    }
-    else
-    {
-        res.redirect('/login');
-    }
-});
-
-app.get('/logout',function(req,res){
-    req.session.user = null;
-    res.redirect('/login');
-});
-*/

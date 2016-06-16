@@ -18,7 +18,7 @@ var url = require('url');
 
 exports.app = function (req, res, next) {
 	console.log("app");
-	res.redirect('/public/index.html');
+	res.redirect('/public/b/www/index.html');
 };
  
 exports.new = function (req, res, next) {
