@@ -8,17 +8,25 @@
 
 exports.debug = true;
 exports.port = 3000;
-exports.email = 'fengmk2@gmail.com';
 exports.site_name = 'Node TODO';
 exports.site_desc = 'Very simple todo, demo for connect web dev.';
 exports.session_secret = 'todo session secret';
 
 exports.db ={
-    host: 'japan.cnqxo1udr78c.ap-northeast-1.rds.amazonaws.com',
-    user: 'tenji',
-    password: 'tenji456$%^',
-    database:'WK',
+    host: '153.122.98.240',
+    user: 'ren',
+    password: 'ren456$%^',
+    database:'REN',
     port: 3306
+};
+
+
+exports.dbm ={
+    host: '153.122.98.240',
+    user: 'ren',
+    password: 'ren123',
+    database:'ren',
+    port: 3005
 };
 
 exports.status ={

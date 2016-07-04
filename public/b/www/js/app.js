@@ -31,43 +31,43 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
+    
+    .state('app.blogs', {
+      url: '/blogs',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/blogs.html',
+          controller: 'listCtrl'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+  .state('app.blog', {
+      url: '/blog',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/blog.html',
+          controller: 'dataCtrl'
         }
       }
     })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+    .state('app.todos', {
+      url: '/todos',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/todos.html',
+          controller: 'listCtrl'
+        }
       }
-    }
-  });
+    })
+    .state('app.todo', {
+      url: '/todo',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/todo.html',
+          controller: 'dataCtrl'
+        }
+      }
+    });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/todos');//默认列表页
 });

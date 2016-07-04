@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MongoConfiguration">
+    <option name="serverConfigurations">
+      <list>
+        <ServerConfiguration>
+          <option name="authenticationDatabase" value="admin" />
+          <option name="authenticationMechanism" value="SCRAM-SHA-1" />
+          <option name="label" value="Admin" />
+          <option name="password" value="YeeNuoFun123!@#" />
+          <option name="serverUrls">
+            <list>
+              <option value="153.122.98.240:3005" />
+            </list>
+          </option>
+          <option name="userDatabase" value="admin" />
+          <option name="username" value="root" />
+        </ServerConfiguration>
+        <ServerConfiguration>
+          <option name="authenticationDatabase" value="ren" />
+          <option name="authenticationMechanism" value="SCRAM-SHA-1" />
+          <option name="connectOnIdeStartup" value="true" />
+          <option name="label" value="REN" />
+          <option name="password" value="ren123" />
+          <option name="serverUrls">
+            <list>
+              <option value="153.122.98.240:3005" />
+            </list>
+          </option>
+          <option name="userDatabase" value="ren" />
+          <option name="username" value="ren" />
+        </ServerConfiguration>
+      </list>
+    </option>
+    <option name="shellPath" value="C:\Program Files\MongoDB\Server\3.2\bin\mongo.exe" />
+  </component>
+</project>
