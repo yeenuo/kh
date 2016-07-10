@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers','baiduMap'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -31,7 +31,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-    
+    .state('app.map', {
+      url: '/map',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/map.html',
+          controller: 'mapCtrl'
+        }
+      }
+    })
     .state('app.blogs', {
       url: '/blogs',
       views: {
@@ -51,16 +59,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
     .state('app.todos', {
-      url: '/todos',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/todos.html',
-          controller: 'listCtrl'
-        }
+    url: '/todos',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/todos.html',
+        controller: 'listCtrl'
       }
-    })
+    }
+  })
     .state('app.todo', {
-      url: '/todo',
+      url: '/todos/:id',//支持rest 默认app
       views: {
         'menuContent': {
           templateUrl: 'templates/todo.html',

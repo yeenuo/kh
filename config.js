@@ -7,7 +7,7 @@
 "use strict";
 
 exports.debug = true;
-exports.port = 3000;
+exports.port = 8379;
 exports.site_name = 'Node TODO';
 exports.site_desc = 'Very simple todo, demo for connect web dev.';
 exports.session_secret = 'todo session secret';

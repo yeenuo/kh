@@ -79,6 +79,7 @@ app.use(render({
 var router = urlrouter(function (app) {
     app.get('/', wk.app);
     app.get('/data', wk.data);
+    app.post('/data', wk.data);
     app.get('/list', wk.list);
     app.post('/list', wk.list);
     app.post('/login', wk.login);
