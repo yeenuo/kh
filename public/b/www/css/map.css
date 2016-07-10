@@ -1,0 +1,23 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin:0;
+  font-family:"Microsoft Yahei";
+}
+
+#l-map {
+  height:100%;
+  width:75%;
+}
+
+#left {
+  height: 100%;
+  width: 24.5%;
+  float:left;
+  overflow: hidden;
+  border-right-style: groove;
+}
+
+#search {
+  padding: 10px;
+}

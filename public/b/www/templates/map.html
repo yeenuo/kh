@@ -1,0 +1,63 @@
+<table>
+  <tr>
+    <td colspan="2" height="80%">
+      <baidu-map options="mapOptions" ak="NWAfATK0qZ6S1aev2RwaV4Bp6eSomxIO" offline="offlineOpts"
+                 style="width: 100%; height:100%;display: block;" on-map-loaded="mapLoaded(map)"></baidu-map>
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="top">
+      <table>
+
+
+        <tr>
+
+          <td>
+
+            <select ng-model="q.type" ng-options="o.text for o in config.types track by o.id">
+              <option value="">---种类---</option>
+            </select>
+          </td>
+
+          <td>
+
+            <select ng-model="q.kind" ng-options="o.text for o in config.kinds track by o.id">
+              <option value="">---分类---</option>
+            </select>
+          </td>
+          <td>
+
+            <select ng-model="q.distance" ng-options="o.text for o in config.distances track by o.id">
+              <option value="">---距离---</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+
+
+          <td>
+
+            <select ng-model="q.point" ng-options="o.text for o in config.points track by o.id">
+              <option value="">---分数---</option>
+            </select>
+
+          </td>
+
+
+          <td>
+            <select ng-model="q.level" ng-options="o.text for o in config.levels track by o.id">
+              <option value="">---等级---</option>
+            </select>
+          </td>
+          <td>
+            <select ng-model="q.relation" ng-options="o.text for o in config.relations track by o.id">
+              <option value="">---关系---</option>
+            </select>
+          </td>
+
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
